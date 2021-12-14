@@ -1,0 +1,49 @@
+<Section>
+  <h2>Payment</h2>
+  {Object.keys(this.props.cards).length > 0
+    ?
+      <CardList>
+      {Object.keys(this.props.cards).map(card => {
+
+        const { last4, brand, exp_year, exp_month } = this.props.cards[card].card
+
+        return (
+          <Card key={card} title={`${brand} ${last4}`} extra={<a onClick={() => this.handleRemoveCard(card)}>Delete</a>}>
+            Expires {exp_month} / {exp_year}
+          </Card>
+        )
+      })}
+      </CardList>
+    : <div>
+        <p>No cards added</p>
+      </div>
+  }
+</Section>
+<Section>
+  <h2>Shipping</h2>
+  <ShippingForm>
+    <h3>Add New Address</h3>
+    <Input id='name' value={name} size='large' placeholder='Name *' onChange={(e) => setName(e.target.value)} />
+    <Input id='street' value={street} size='large' placeholder='Address Line 1 *' onChange={(e) => setStreet(e.target.value)} />
+    <Input id='street2' value={street2} size='large' placeholder='Address Line 2' onChange={(e) => setStreet2(e.target.value)}  />
+    <Input id='city' value={city} size='large' placeholder='City *' onChange={(e) => setCity(e.target.value)}  />
+    <Input id='state' value='Minnesota' disabled size='large' />
+    <Button size='large' onClick={this.handleSubmitAddress}>Add Address</Button>
+  </ShippingForm>
+  <Divider />
+  <Addresses>
+  {user.addresses &&
+    user.addresses.map((address, index) => (
+      <Card
+        title={address.name}
+        key={index}
+      >
+        <p>{address.street}</p>
+        <p>{address.street2}</p>
+        <p>{address.state}</p>
+        <p>{address.city}</p>
+      </Card>
+    ))
+  }
+  </Addresses>
+</Section>

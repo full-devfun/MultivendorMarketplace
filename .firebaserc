@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "local-guru-aeac9"
+  },
+  "targets": {
+    "local-guru-development": {
+      "hosting": {
+        "local-guru-aeac9": [
+          "local-guru-aeac9"
+        ]
+      }
+    }
+  }
+}

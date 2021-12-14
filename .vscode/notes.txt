@@ -1,0 +1,51 @@
+General: 
+    [x] Login fails every time (works yet bad)
+    [x] signup also fails (fixed but very slow)
+    [ ] Integrate small version of about us into landing page[leave for later]
+    [x] Produce and tags need to be sorted much better
+    [x] once logged in you can't log out
+    [ ] once logging out all database related features are disabled. Including the home page and viewing any product.
+
+Nav:
+    [x] Remove shop option and turn into side drawer with some basic categories(ask Damani which ones)
+    [x] most of the options on the bar don't actually have anything they are linking to
+    [x] there are more tags on the navbar than on the search [african, asian, italian]
+    [ ] Find a place for social media links
+    [x] hitting a produce button in the nav bar while on a product page it doesn’t redirect and instead just adds the url to the end
+
+Home: 
+    [ ] left most featured products on main page have dots under them for vegan and vegetarian but the tool tips to explain those don't line up with the dots 
+    [x] subscribe for updates text field is not large enough for the placeholder text
+    [x] always listed as logged in (fixed)
+    [ ] scrolls slightly to the right for some reason on small screens
+
+Shop: 
+    [ ] A lot of things aren't properly labeled well enough
+    [ ] Fruit is in tags and produce section of the filter
+    [x] Eliminate prepared foods altogether, not selling that for now
+    [ ] Search using tags and produce filters is an OR not an AND so the more you hit the options you’re given instead of only the ones that match the criteria
+
+Producers: 
+    [x] Shows producers without a name causing crash (fixed)
+    [x] Shows producers without any products they are producing (fixed) 
+    [ ] Card size changes based on a lot of things like bio length and if they have extra products
+
+Product: 
+    [x] Some users have NaN labels for price (fixed)
+    [x] Max order isn't displayed anywhere so adding just stops and doesn't allow you to add more (fixed, it's now clear and next to the price though it could be clearer)
+    [x] If you add a lot of one item then switch to a user with a max lower than it the item count stays the same and allows you to check out still. (fixed)
+    [x] Price listed in the count below doesn’t match price above in the listing (fixed)
+    [x] The last leaf in the rating is always enlarged and has no effect on hover (fixed. It now has a default of 0)
+    [x] There is a section for reviews but no way of leaving a review yourself. When no logged in it should tell you to log in in order to leave a review
+    [x] going to a product url that doesn't exist crashes the website (fixed and added a 404 page)
+
+Producer:
+    [x] Following when not logged in crashes the website (removed follow button when not logged in)
+    [x] Going to a producer url that doesn't exist crashes the website (added 404 page)
+    [x] 404 page needs to be styled on producer page
+
+Cart:
+    [x] I can't get it to load at all in the slightest 
+
+Orders: 
+    [ ] Crashes if not logged in
